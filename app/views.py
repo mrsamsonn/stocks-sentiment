@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .script import func
 
 def index(request):
-    return render(request, 'index.html')
+    output = func
+    return render(request, 'index.html', {'output': output})
